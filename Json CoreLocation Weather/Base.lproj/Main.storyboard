@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zmf-YN-BhZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sun View Controller-->
+        <scene sceneID="ovA-h0-pi4">
+            <objects>
+                <viewController id="zmf-YN-BhZ" customClass="SunViewController" customModule="Json_CoreLocation_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEO-gu-OD5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter city to find out sunrice / sunset" translatesAutoresizingMaskIntoConstraints="NO" id="jAA-R2-Qoa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="BaS-B4-6uf"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zmf-YN-BhZ" id="oTR-NI-Gcr"/>
+                                </connections>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljY-TP-jP5">
+                                <rect key="frame" x="20" y="106" width="335" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="F6m-dg-ojm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rS-ce-bzk">
+                                <rect key="frame" x="20" y="218" width="335" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="18P-Fn-qYE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0rS-ce-bzk" firstAttribute="top" secondItem="ljY-TP-jP5" secondAttribute="bottom" constant="30" id="3CO-Yj-24d"/>
+                            <constraint firstItem="0rS-ce-bzk" firstAttribute="leading" secondItem="0gZ-qI-3JI" secondAttribute="leading" constant="20" id="QvD-Ra-AEd"/>
+                            <constraint firstItem="jAA-R2-Qoa" firstAttribute="top" secondItem="0gZ-qI-3JI" secondAttribute="top" id="VSJ-Sv-wC5"/>
+                            <constraint firstItem="ljY-TP-jP5" firstAttribute="top" secondItem="jAA-R2-Qoa" secondAttribute="bottom" constant="30" id="aV0-rZ-69E"/>
+                            <constraint firstItem="jAA-R2-Qoa" firstAttribute="leading" secondItem="0gZ-qI-3JI" secondAttribute="leading" id="f2O-na-fxo"/>
+                            <constraint firstItem="0gZ-qI-3JI" firstAttribute="trailing" secondItem="0rS-ce-bzk" secondAttribute="trailing" constant="20" id="hTY-jv-Uam"/>
+                            <constraint firstItem="ljY-TP-jP5" firstAttribute="leading" secondItem="0gZ-qI-3JI" secondAttribute="leading" constant="20" id="pUA-8O-UXi"/>
+                            <constraint firstItem="jAA-R2-Qoa" firstAttribute="trailing" secondItem="0gZ-qI-3JI" secondAttribute="trailing" id="rYp-Jj-Crf"/>
+                            <constraint firstItem="0gZ-qI-3JI" firstAttribute="trailing" secondItem="ljY-TP-jP5" secondAttribute="trailing" constant="20" id="xoK-z9-cMA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0gZ-qI-3JI"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="jAA-R2-Qoa" id="rqQ-cg-9Kg"/>
+                        <outlet property="sunRiseLbl" destination="ljY-TP-jP5" id="U0S-Mg-TR5"/>
+                        <outlet property="sunSetLbl" destination="0rS-ce-bzk" id="cKb-ct-xs0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQA-zu-CCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="-195.6521739130435"/>
+        </scene>
+    </scenes>
+</document>
